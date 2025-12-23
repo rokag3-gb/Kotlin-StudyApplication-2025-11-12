@@ -1,6 +1,6 @@
 package com.example.study.blog.service
 
-import com.example.study.blog.dto.BlogDto
+import com.example.study.blog.dto.BlogSearchDto
 import com.example.study.core.exception.InvalidInputException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpHeaders
@@ -14,7 +14,7 @@ class BlogService {
     @Value("\${REST_API_KEY}")
     lateinit var restApiKey: String
 
-    fun searchKakao(blogDto: BlogDto): String? {
+    fun searchKakao(blogDto: BlogSearchDto): String? {
         val msgList = mutableListOf<ExceptionMsg>()
 
         if (blogDto.query.trim().isEmpty()) {

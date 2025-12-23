@@ -1,6 +1,6 @@
 package com.example.study.blog.controller
 
-import com.example.study.blog.dto.BlogDto
+import com.example.study.blog.dto.BlogSearchDto
 import com.example.study.blog.service.BlogService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -13,7 +13,7 @@ class BlogController(
     val blogService: BlogService
 ) {
     @GetMapping("")
-    fun search(@RequestBody blogDto: BlogDto): String? {
+    fun search(@RequestBody blogDto: BlogSearchDto): String? {
         val result = blogService.searchKakao(blogDto)
         return result
     }
