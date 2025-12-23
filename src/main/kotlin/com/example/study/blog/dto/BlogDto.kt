@@ -1,6 +1,7 @@
 package com.example.study.blog.dto
 
-class BlogDto (
+// DTO 만들 때에는 꼭 data class로 만들자.
+data class BlogDto (
     val query: String,
     val sort: String,
     val page: Int,

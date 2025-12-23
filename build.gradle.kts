@@ -36,6 +36,7 @@ dependencies {
 	testRuntimeOnly("com.h2database:h2")
 //    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 //    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.springframework:spring-webflux")
 }
 
 kotlin {
